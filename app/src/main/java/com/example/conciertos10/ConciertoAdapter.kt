@@ -8,7 +8,7 @@ import android.widget.BaseAdapter
 import android.widget.ImageButton
 import android.widget.TextView
 
-class ConciertoAdapter(private val context: Context, private val conciertos: List<Pair<Int, String>>) : BaseAdapter() {
+class ConciertoAdapter(private val context: Context, private val conciertos: List<Temp>) : BaseAdapter() {
 
     override fun getCount(): Int {
         return conciertos.size
@@ -30,9 +30,14 @@ class ConciertoAdapter(private val context: Context, private val conciertos: Lis
         val txtArtista = view.findViewById<TextView>(R.id.txtArtista)
 
         // Configura la imagen del botón y el texto del artista
-        val (imageResId, artista) = conciertos[position]
-        btnConcierto.setImageResource(imageResId)
-        txtArtista.text = artista
+        val con = conciertos[position]
+        btnConcierto.setImageResource(con.image!!)
+        txtArtista.text = con.nombreDeConcierto
+
+        btnConcierto.setOnClickListener {
+            con.funcionClick(position)
+            println("cash cash caash")
+        }
 
         return view
     }
