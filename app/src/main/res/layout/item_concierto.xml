@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/imageViewConcierto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <ImageButton
+        android:id="@+id/btnConcierto"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:background="?attr/selectableItemBackground"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_foreground" />
+
+    <TextView
+        android:id="@+id/txtArtista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingStart="20dp"
+        android:paddingTop="15dp"
+        android:text="Nombre del Artista"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+</LinearLayout>
